@@ -3,6 +3,8 @@ spring-rest-example
 
 A simple example using Spring Boot to build a REST server.
 
+## Building
+
 To build the example, you will need to install:
 
 * Java 10 JDK (minimum)
@@ -14,7 +16,11 @@ Once installed build the example:
 $ ./mvn package
 ```
 
-This builds and tests the example and will create a JAR file.  To run the example REST server:
+The standard Maven stages are supported, please see the [Maven](https://maven.apache.org) documentation.  The package stage will compile and test the example.  As a final step it will package the server in a JAR file.
+
+## Running
+
+To run the example REST server:
 
 ```
 $ java -jar ./target/api-1.0.0.jar 
