@@ -1,10 +1,10 @@
 package us.stad.api.model;
 
-import lombok.Data;
-
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+
+import lombok.Data;
 
 @Data
 @Entity

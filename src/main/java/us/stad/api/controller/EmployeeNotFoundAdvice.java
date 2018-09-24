@@ -15,5 +15,5 @@ class EmployeeNotFoundAdvice {
   String employeeNotFoundHandler(EmployeeNotFoundException ex) {
     return ex.getMessage();
   }
-  
+
 }
