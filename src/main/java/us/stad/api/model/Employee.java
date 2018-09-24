@@ -4,22 +4,35 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 
+import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 
 @Data
 @Entity
 public class Employee {
 
+  @ApiModelProperty(notes = "The database generated employee ID")
   private @Id @GeneratedValue Long id;
 
+  @ApiModelProperty(notes = "Employee first name")
   private String firstName;
+  @ApiModelProperty(notes = "Employee middle initial")
   private String middleInitial;
+  @ApiModelProperty(notes = "Employee last name")
   private String lastName;
+  @ApiModelProperty(notes = "Employee date of birth")
   private String dateOfBirth;
+  @ApiModelProperty(notes = "Employee date of employment")
   private String dateOfEmployment;
+  @ApiModelProperty(notes = "Employee status")
   private String status = "ACTIVE";
 
-  public Employee(String firstName, String middleInitial, String lastName, String dateOfBirth, String dateOfEmployment, String status) {
+  public Employee() {
+    super();
+  }
+
+  public Employee(String firstName, String middleInitial, String lastName, String dateOfBirth, String dateOfEmployment,
+      String status) {
     this.firstName = firstName;
     this.middleInitial = middleInitial;
     this.lastName = lastName;

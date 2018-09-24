@@ -32,6 +32,12 @@ If you want to pre-load the example database, pass a JSON document as an argumen
 $ java -jar ./target/api-1.0.0.jar ./src/test/resources/database.json
 ```
 
+## API Documentation
+
+The example includes (Swagger)[https://swagger.io] API documentation support along with the simple to use Swagger UI.  The UI is useful for executing the API if you don't want to use the curl examples below.
+
+To display the json Swagger document, navigate to ```http://localhost:8080/v2/api-docs```.  To use the Swagger UI to call the API, navigate to ```http://localhost:8080/swagger-ui.html```
+
 ## Using
 
 Use [curl](https://curl.haxx.se) or you favorite tool to call the REST server.  The server exposes the ```/employees``` object and allows you to perform the normal CRUD (create, read, update, delete) operations on the object.  In addition, like a proper RESTful service, you can get a list of all employees in the database.
@@ -73,4 +79,3 @@ curl -X DELETE http://user1:password1@localhost:8080/employees/2
 ```
 
 If you attempt to retrieve employee 2, the server will respond with a 404 (Not Found) HTTP status.
-
