@@ -34,7 +34,7 @@ $ java -jar ./target/api-1.0.0.jar ./src/test/resources/database.json
 
 ## API Documentation
 
-The example includes (Swagger)[https://swagger.io] API documentation support along with the simple to use Swagger UI.  The UI is useful for executing the API if you don't want to use the curl examples below.
+The example includes [Swagger](https://swagger.io) API documentation support along with the simple to use Swagger UI.  The UI is useful for executing the API if you don't want to use the curl examples below.
 
 To display the json Swagger document, navigate to ```http://localhost:8080/v2/api-docs```.  To use the Swagger UI to call the API, navigate to ```http://localhost:8080/swagger-ui.html```
 
