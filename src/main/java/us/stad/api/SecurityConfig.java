@@ -9,12 +9,14 @@ import org.springframework.security.web.util.matcher.AntPathRequestMatcher;
 @Configuration
 public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
+  @Override
   protected void configure(AuthenticationManagerBuilder auth) throws Exception {
     auth.inMemoryAuthentication()
         .passwordEncoder(org.springframework.security.crypto.password.NoOpPasswordEncoder.getInstance())
         .withUser("user1").password("password1").roles("USER");
   }
 
+  @Override
   protected void configure(HttpSecurity http) throws Exception {
     http.httpBasic().and().authorizeRequests().requestMatchers(new AntPathRequestMatcher("/employees/**", "DELETE"))
         .hasRole("USER").and().csrf().disable().headers().frameOptions().disable();
